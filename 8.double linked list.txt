@@ -1,0 +1,160 @@
+#include<stdio.h>
+// #include<conio.h>
+#include<stdlib.h>
+
+struct node
+{
+ int data;
+ struct node *prev;
+ struct node *next;
+} *head = NULL,*ptr;
+
+int item;
+
+void insertAtBeginning()
+{
+  ptr = (struct node *)malloc(sizeof(struct node));
+  printf("Enter the data.\n");
+  scanf("%d",&item);
+  ptr->data = item;
+  ptr->prev = NULL;
+  if(head==NULL)
+  {
+   head = ptr;
+  }
+  else
+  {
+   head->prev=ptr;
+   ptr->next=head;
+   head=ptr;
+  }
+}
+
+void insertAtEnd()
+{
+ struct node *temp=head;
+ ptr = (struct node *)malloc(sizeof(struct node));
+ printf("Enter the data.\n");
+ scanf("%d",&item);
+ ptr->data=item;
+ ptr->next=NULL;
+ if(head==NULL)
+ {
+  head = ptr;
+  ptr->prev = NULL;
+ }
+ else
+ {
+  while(temp->next!=NULL)
+  {
+   temp = temp->next;
+  }
+  temp->next=ptr;
+  ptr->prev=temp;
+ }
+}
+void deleteFromBeginning()
+{
+ struct node *temp;
+ if(head==NULL)
+ {
+  printf("Underflow\n");
+  return;
+ }
+ temp = head;
+ if(head->next==NULL)
+  {
+   head=NULL;
+   free(temp);
+  }
+  else
+  {
+   head = temp->next;
+   head -> prev = NULL;
+   temp->next=NULL;
+   free(temp);
+  }
+}
+void deleteFromEnd()
+{
+ struct node *temp;
+ if(head==NULL)
+ {
+  printf("Underflow\n");
+ }
+ else
+ {
+  temp = head;
+  if(head->next==NULL)
+  {
+   head=NULL;
+   free(temp);
+  }
+  else
+  {
+   while(temp->next!=NULL)
+   {
+    temp=temp->next;
+   }
+   temp->prev->next=NULL;
+   temp->prev=NULL;
+   free(temp);
+  }
+ }
+}
+
+void traverse()
+{
+ ptr=head;
+ if(head==NULL)
+ {
+  printf("Underflow\n");
+ }
+ else
+ {
+  while(ptr!= NULL)
+  {
+   printf("%p\t%d\t%p\n",ptr->prev,ptr->data,ptr->next);
+   ptr=ptr->next;
+  }
+ }
+}
+
+void main()
+{
+ int choice;
+//  clrscr();
+ while(1)
+ {
+  printf("\n1=insert at beginning.\n");
+  printf("2=insert at end.\n");
+  printf("3=delete from beginning.\n");
+  printf("4=delete from end\n");
+  printf("5=traverse\n");
+  printf("6=exit\n");
+  scanf("%d",&choice);
+  switch(choice)
+  {
+   case 1:
+    insertAtBeginning();
+    break;
+   case 2:
+    insertAtEnd();
+    break;
+   case 3:
+    deleteFromBeginning();
+    break;
+   case 4:
+    deleteFromEnd();
+    break;
+   case 5:
+    traverse();
+    break;
+   case 6:
+    exit(0);
+   default:
+    printf("Invalid input\n");
+  }
+ }
+//  getch();
+}

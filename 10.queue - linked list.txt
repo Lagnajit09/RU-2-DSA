@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *link;
+}*front = NULL,*rear = NULL;
+
+void insert()
+{
+    struct node *temp;
+    int item;
+    
+    temp = (struct node *)malloc(sizeof(struct node));
+    
+    printf("Enter the data.\n");
+    scanf("%d",&item);
+    temp->data = item;
+    temp->link = NULL;
+    
+    if(front == NULL)
+        front = temp;
+    else
+        rear->link = temp;
+        
+    rear = temp;
+    
+}
+
+void del()
+{
+    struct node *temp;
+    if(front==NULL)
+    {
+        printf("Underflow.\n");
+        return;
+    }
+    
+    temp = front;
+    
+    if(front == rear)
+    {
+        rear == NULL;
+    }
+    
+    front = front->link;
+    temp->link = NULL;
+    free(temp);
+ 
+}
+
+void traverse()
+{
+    struct node *temp;
+    if(front==NULL)
+    {
+        printf("Underflow.\n");
+        return;
+    }
+    
+    temp = front;
+    while(temp!=NULL)
+    {
+        printf("%d\t",temp->data);
+        temp = temp->link;
+    }
+}
+
+void main()
+{
+    int ch;
+    clrscr();
+    while(1)
+    {
+        printf("\nEnter\n1 for insert\n2 for delete\n3 for traverse\n4 to exit\n");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+            insert();
+            break;
+            case 2:
+            del();
+            break;
+            case 3:
+            traverse();
+            break;
+            case 4:
+            exit(0);
+            default:
+            printf("Invalid Entry.\n");
+        }
+    }
+    getch();
+}

@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int arr[20],i,val,size;
+    int index[20],j=0,ctr=0;
+    clrscr();
+    printf("Enter the size of array.\n");
+    scanf("%d",&size);
+    printf("Enter the elements.\n");
+    for(i=0; i<size; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("Enter the value to be searched.\n");
+    scanf("%d",&val);
+    
+    for(i=0; i<size; i++)
+    {
+        if(arr[i]==val)
+        {
+            index[j++]=i;
+            ctr++;
+        }
+    }
+    
+    if(ctr)
+    {
+        printf("No. of occurrences of the item is:%d\n",ctr);
+        printf("Item found at position:\n");
+        for(i=0; i<j; i++)
+        {
+            printf("%d,",index[i]);
+        }
+    }
+    else
+    {
+        printf("Item not found.\n");
+    }
+    getch();
+}

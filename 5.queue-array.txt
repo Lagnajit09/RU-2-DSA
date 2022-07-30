@@ -1,0 +1,101 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#define s 100
+
+int queue[s];
+int front = -1,rear = -1;
+
+void insert()
+{
+    int item;
+ 
+    if(rear == s-1)
+    {
+    printf("Overflow\n");
+    return;
+    }
+ 
+    if(front == -1)
+    {
+         front = 0;
+         rear = 0;
+    }
+    else
+    {
+        rear = rear+1;
+    }
+    
+    printf("Enter the data.\n");
+    scanf("%d",&item);
+    queue[rear]=item;
+    
+    printf("%d inserted into queue.\n",item);
+}
+
+void del()
+{
+    int item;
+    if(front == -1 || front > rear)
+    {
+        printf("Underflow.\n");
+        return;
+    }
+    
+    item = queue[front];
+    
+    if(front==rear)
+    {
+        front = -1;
+        rear = -1;
+    }
+    else
+    {
+        front = front+1;
+    }
+    
+    printf("%d deleted from queue.\n",item);
+    
+}
+
+void traverse()
+{
+    int i;
+    if(front == -1)
+    {
+        printf("Underflow\n");
+        return;
+    }
+    for(i=front; i<=rear; i++)
+    {
+        printf("%d\t",queue[i]);
+    }
+}
+
+void main()
+{
+    int ch,i,n;
+    clrscr();
+    for(i=0; i<s; i++)
+    {
+        printf("\nEnter\n1 for insert\n2 for delete\n3 for traverse\n4 to exit\n");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+            insert();
+            break;
+            case 2:
+            del();
+            break;
+            case 3:
+            traverse();
+            break;
+            case 4:
+            exit(0);
+            default:
+            printf("Invalid Entry.\n");
+        }
+    }
+    getch();
+}

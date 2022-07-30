@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+ int arr[10],max,n,x,i,temp,index;
+ clrscr();
+ printf("Enter the size of array.\n");
+ scanf("%d",&n);
+ printf("Enter the elements.\n");
+ for(i=0; i<n; i++)
+ {
+  scanf("%d",&arr[i]);
+ }
+
+ for(x=0; x<n-1; x++) //4 times
+ {
+  max = arr[0];
+  index = 0;
+  for(i=1; i<n-x; i++)
+  {
+   if(arr[i] > max)//finding max element
+   {
+    max = arr[i];
+    index = i;
+   }
+  }
+  //swaapping max element with its position
+  temp = arr[i-1];
+  arr[i-1] = arr[index];
+  arr[index] = temp;
+ }
+
+ printf("The sorted array is:\n");
+ for(i=0; i<n; i++)
+ {
+  printf("%d,",arr[i]);
+ }
+ getch();
+}

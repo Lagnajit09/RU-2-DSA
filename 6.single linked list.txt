@@ -1,0 +1,212 @@
+#include<stdio.h>
+// #include<conio.h>
+#include<stdlib.h>
+
+struct node
+{
+ int data;
+ struct node *link;
+}*head=NULL,*ptr,*temp;
+
+void insertAtBeginning()
+{
+    int item;
+    ptr = (struct node *)malloc(sizeof(struct node));
+    printf("Enter the data.");
+    scanf("%d",&item);
+    ptr->data = item;
+    ptr->link = head;
+    head = ptr;
+    printf("Node inserted successfully.\n\n");
+}
+
+void insertAtEnd()
+{
+    int item;
+    temp = head;
+    
+    ptr = (struct node *)malloc(sizeof(struct node));
+    printf("Enter the data\n");
+    scanf("%d",&item);
+    ptr->data = item;
+    ptr->link = NULL;
+    
+    if(head == NULL)
+    {
+        head = ptr;
+    }
+    else
+    {
+        while(temp->link != NULL)
+        {
+            temp = temp->link;
+        }
+        temp->link = ptr;
+    }
+    printf("Node inserted successfully.\n\n");
+}
+
+void deleteFromBeginning()
+{
+    if(head == NULL)
+    {
+        printf("Underflow\n");
+    }
+    else
+    {
+        temp = head;
+        head = head->link;
+        temp->link = NULL;
+        free(temp);
+        printf("Node deleted successfully.\n\n");
+    }
+}
+
+void deleteFromEnd()
+{
+    struct node *current;
+    if(head == NULL)
+    {
+        printf("Underflow\n");
+    }
+    else if(head->link == NULL)
+    {
+        temp = head;
+        head = NULL;
+        free(temp);
+        printf("Node deleted successfully.\n\n");
+    }
+    else
+    {
+        temp = head;
+        while(temp->link != NULL)
+        {
+            current = temp;
+            temp = temp->link;
+        }
+        current->link = NULL;
+        free(temp);
+        printf("Node deleted successfully.\n\n");
+    }
+}
+
+void traverse()
+{
+    if(head == NULL)
+    {
+        printf("Underflow\n");
+    }
+    else
+    {
+        temp = head;
+        while(temp != NULL)
+        {
+            printf("%d\t",temp -> data);
+            printf("%p\n",temp -> link);
+            temp = temp -> link;
+        }
+    }
+}
+
+void search()
+{
+    int item,ctr=0;
+    struct node *temp = head;
+    
+    printf("Enter the item to be searched:\n");
+    scanf("%d",&item);
+    
+    while (temp != NULL)
+    {
+        if (temp->data == item)
+        {
+            printf("Item found at location: %p\n",temp);
+            ctr++;
+        }
+        temp = temp->link;
+    }
+    
+    if(!ctr)
+    {
+        printf("Item not found.\n");
+    }
+        
+}
+
+void reverse() 
+{
+     struct node *prevNode, *curNode;
+
+    if(head != NULL)
+    {
+        prevNode = head;
+        curNode = head->link;
+        head = head->link;
+
+        prevNode->link = NULL; // Make first node as last node
+
+        while(head != NULL)
+        {
+            head = head->link;
+            curNode->link = prevNode;
+
+            prevNode = curNode;
+            curNode = head;
+        }
+
+        head = prevNode; // Make last node as head
+
+        printf("Successfully reversed list\n");
+    }
+}
+
+void main()
+{
+ int choice;
+//  clrscr();
+ while(1)
+ {
+  printf("Enter\n1 = insert at beginning\n");
+  printf("2 = insert at end\n");
+  printf("3 = delete from beginning\n");
+  printf("4 = delete from end\n");
+  printf("5 = search an item\n");
+  printf("6 = traverse\n");
+  printf("7 = reverse the list\n");
+  printf("8 = Exit\n");
+  scanf("%d",&choice);
+  switch(choice)
+  {
+   case 1:
+    insertAtBeginning();
+    break;
+   case 2:
+    insertAtEnd();
+    break;
+   case 3:
+    deleteFromBeginning();
+    break;
+   case 4:
+    deleteFromEnd();
+    break;
+   case 5:
+    search();
+    break;
+   case 6:
+    traverse();
+    break;
+   case 7:
+    reverse();
+    break;
+   case 8:
+    exit(0);
+   default:
+    printf("Invalid Input\n");
+  }
+ }
+//  getch();
+}
+
+
+
+
