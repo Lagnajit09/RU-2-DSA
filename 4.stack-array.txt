@@ -6,7 +6,7 @@ int stack[s];
 int top=-1;
 void push()
 {
- int n;
+ int item;
  if(top == s-1)
  {
   printf("Overflow\n");
@@ -14,19 +14,22 @@ void push()
  else{
   top++;
   printf("Enter the value.\n");
-  scanf("%d",&n);
-  stack[top]=n;
+  scanf("%d",&item);
+  stack[top]=item;
+  printf("%d pushed into the stack.\n",item);
  }
 }
 void pop()
 {
+ int item;
  if(top == -1)
  {
   printf("Underflow.\n");
  }
  else{
-  printf("%d\n",stack[top]);
+  item = stack[top];
   top--;
+  printf("%d poped from the stack.\n",item);
  }
 }
 void traverse()
@@ -66,5 +69,5 @@ void main()
     printf("Invalid Entry.\n");
   }
  }
- getch();
+getch();
 }
