@@ -1,5 +1,5 @@
 #include<stdio.h>
-// #include<conio.h>
+#include<conio.h>
 #include<stdlib.h>
 
 struct node
@@ -7,12 +7,11 @@ struct node
  int data;
  struct node *prev;
  struct node *next;
-} *head = NULL,*ptr;
-
-int item;
+} *head = NULL,*ptr,*temp;
 
 void insertAtBeginning()
 {
+  int item;
   ptr = (struct node *)malloc(sizeof(struct node));
   printf("Enter the data.\n");
   scanf("%d",&item);
@@ -20,31 +19,35 @@ void insertAtBeginning()
   ptr->prev = NULL;
   if(head==NULL)
   {
-   head = ptr;
+   ptr->next = NULL;
   }
   else
   {
    head->prev=ptr;
    ptr->next=head;
-   head=ptr;
   }
+  head=ptr;
+  printf("Node inserted successfully.\n\n");
 }
 
 void insertAtEnd()
 {
- struct node *temp=head;
+ int item;
  ptr = (struct node *)malloc(sizeof(struct node));
  printf("Enter the data.\n");
  scanf("%d",&item);
  ptr->data=item;
  ptr->next=NULL;
+ 
  if(head==NULL)
  {
   head = ptr;
   ptr->prev = NULL;
  }
+ 
  else
  {
+  temp = head;
   while(temp->next!=NULL)
   {
    temp = temp->next;
@@ -52,10 +55,13 @@ void insertAtEnd()
   temp->next=ptr;
   ptr->prev=temp;
  }
+ 
+ printf("Node inserted successfully.\n\n");
+ 
 }
+
 void deleteFromBeginning()
 {
- struct node *temp;
  if(head==NULL)
  {
   printf("Underflow\n");
@@ -69,53 +75,56 @@ void deleteFromBeginning()
   }
   else
   {
-   head = temp->next;
+   head = head->next;
    head -> prev = NULL;
    temp->next=NULL;
    free(temp);
   }
+  printf("Node deleted successfully.\n\n");
 }
 void deleteFromEnd()
 {
- struct node *temp;
+ struct node *current;
+ 
  if(head==NULL)
  {
   printf("Underflow\n");
+  return;
+ }
+
+ temp = head;
+ if(head->next==NULL)
+ {
+   head=NULL;
+   free(temp);
  }
  else
  {
-  temp = head;
-  if(head->next==NULL)
-  {
-   head=NULL;
-   free(temp);
-  }
-  else
-  {
    while(temp->next!=NULL)
    {
+    current = temp;
     temp=temp->next;
    }
-   temp->prev->next=NULL;
+   current->next=NULL;
    temp->prev=NULL;
    free(temp);
-  }
  }
+ printf("Node deleted successfully.\n\n");
 }
 
 void traverse()
 {
- ptr=head;
+ temp=head;
  if(head==NULL)
  {
   printf("Underflow\n");
  }
  else
  {
-  while(ptr!= NULL)
+  while(temp!= NULL)
   {
-   printf("%p\t%d\t%p\n",ptr->prev,ptr->data,ptr->next);
-   ptr=ptr->next;
+   printf("%p\t%d\t%p\n",temp->prev,temp->data,temp->next);
+   temp=temp->next;
   }
  }
 }
@@ -123,7 +132,7 @@ void traverse()
 void main()
 {
  int choice;
-//  clrscr();
+ clrscr();
  while(1)
  {
   printf("\n1=insert at beginning.\n");
@@ -156,5 +165,5 @@ void main()
     printf("Invalid input\n");
   }
  }
-//  getch();
+ getch();
 }
