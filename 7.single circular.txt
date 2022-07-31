@@ -2,8 +2,6 @@
 #include<conio.h>
 #include<stdlib.h>
 
-int item;
-
 struct node
 {
  int data;
@@ -12,6 +10,7 @@ struct node
 
 void insertAtBeginning()
 {
+ int item;
  ptr = (struct node *)malloc(sizeof(struct node));
  printf("Enter the data\n");
  scanf("%d",&item);
@@ -32,10 +31,12 @@ void insertAtBeginning()
   ptr->link = start;
   start = ptr;
  }
+ printf("Node inserted successfully.\n");
 }
 
 void insertAtEnd()
 {
+ int item;
  ptr = (struct node *)malloc(sizeof(struct node));
  printf("Enter the data.\n");
  scanf("%d",&item);
@@ -55,6 +56,7 @@ void insertAtEnd()
   temp->link = ptr;
   ptr->link = start;
  }
+ printf("Node inserted successfully.\n");
 }
 
 void deleteFromBeginning()
@@ -83,7 +85,9 @@ void deleteFromBeginning()
   temp->link = start;
   free(current);
  }
+ printf("Node deleted successfully.\n");
 }
+
 void deleteFromEnd()
 {
  if(start==NULL)
@@ -109,6 +113,7 @@ void deleteFromEnd()
   current->link = start;
   free(temp);
  }
+ printf("Node deleted successfully.\n");
 }
 
 void traverse()
