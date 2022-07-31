@@ -1,5 +1,5 @@
 #include<stdio.h>
-// #include<conio.h>
+#include<conio.h>
 #include<stdlib.h>
 
 struct node
@@ -163,7 +163,7 @@ void reverse()
 void main()
 {
  int choice;
-//  clrscr();
+ clrscr();
  while(1)
  {
   printf("Enter\n1 = insert at beginning\n");
@@ -204,9 +204,5 @@ void main()
     printf("Invalid Input\n");
   }
  }
-//  getch();
+getch();
 }
-
-
-
-
