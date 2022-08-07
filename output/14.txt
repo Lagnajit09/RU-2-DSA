@@ -1,0 +1,11 @@
+/tmp/i8UOs2YMaA.o
+Enter the size of array.
+5
+Enter the elements.
+3
+9
+1
+7
+8
+Sorted array is:
+1,3,7,8,9,

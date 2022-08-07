@@ -1,0 +1,11 @@
+/tmp/i8UOs2YMaA.o
+Enter the size of array.
+5
+Enter the array.
+5
+3
+1
+4
+2
+Sorted array is:
+1,2,3,4,5,

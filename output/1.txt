@@ -1,0 +1,34 @@
+/tmp/dxWwSAmtSe.o
+Enter the size of array.
+5
+Enter the elements.
+2
+9
+4
+1
+8
+Enter
+1 to insert an element
+2 to delete an element
+3 to exit.
+1
+Enter the position.
+3
+Enter the item.
+10
+The updated array is:
+2,9,4,10,1,8,
+Enter
+1 to insert an element
+2 to delete an element
+3 to exit.
+2
+Enter the position.
+4
+The resultant array is: 
+2,9,4,10,8,
+Enter
+1 to insert an element
+2 to delete an element
+3 to exit.
+3

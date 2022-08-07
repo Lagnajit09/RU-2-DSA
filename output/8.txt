@@ -1,0 +1,84 @@
+/tmp/EHEF1wlA2u.o
+1=insert at beginning.
+2=insert at end.
+3=delete from beginning.
+4=delete from end
+5=traverse
+6=exit
+1
+Enter the data.
+10
+Node inserted successfully.
+
+
+1=insert at beginning.
+2=insert at end.
+3=delete from beginning.
+4=delete from end
+5=traverse
+6=exit
+2
+Enter the data.
+20
+Node inserted successfully.
+
+
+1=insert at beginning.
+2=insert at end.
+3=delete from beginning.
+4=delete from end
+5=traverse
+6=exit
+2
+Enter the data.
+40
+Node inserted successfully.
+
+
+1=insert at beginning.
+2=insert at end.
+3=delete from beginning.
+4=delete from end
+5=traverse
+6=exit
+5
+(nil)	10	0x556323ed5ae0
+0x556323ed5ac0	20	0x556323ed5b00
+0x556323ed5ae0	40	(nil)
+
+1=insert at beginning.
+2=insert at end.
+3=delete from beginning.
+4=delete from end
+5=traverse
+6=exit
+3
+Node deleted successfully.
+
+
+1=insert at beginning.
+2=insert at end.
+3=delete from beginning.
+4=delete from end
+5=traverse
+6=exit
+4
+Node deleted successfully.
+
+
+1=insert at beginning.
+2=insert at end.
+3=delete from beginning.
+4=delete from end
+5=traverse
+6=exit
+5
+(nil)	20	(nil)
+
+1=insert at beginning.
+2=insert at end.
+3=delete from beginning.
+4=delete from end
+5=traverse
+6=exit
+6

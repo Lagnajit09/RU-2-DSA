@@ -1,0 +1,51 @@
+/tmp/EHEF1wlA2u.o
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+1
+Enter the data.
+9
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+1
+Enter the data.
+6
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+1
+Enter the data.
+1
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+3
+9	6	1	
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+2
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+3
+6	1	
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+4

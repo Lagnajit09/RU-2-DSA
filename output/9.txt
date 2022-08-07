@@ -1,0 +1,66 @@
+/tmp/EHEF1wlA2u.o
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+1
+Enter the data.
+99
+99 pushed to the stack.
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+1
+Enter the data.
+45
+45 pushed to the stack.
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+1
+Enter the data.
+09
+9 pushed to the stack.
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+3
+Printing Stack elements 
+9
+45
+99
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+2
+9 poped from the stack.
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+3
+Printing Stack elements 
+45
+99
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+4

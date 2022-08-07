@@ -1,0 +1,13 @@
+/tmp/dxWwSAmtSe.o
+Enter the size of array.
+5
+Enter the elements.
+3
+8
+1
+9
+1
+Enter the value to be removed.
+1
+The new array is:
+3,8,9,

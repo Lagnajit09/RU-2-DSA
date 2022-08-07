@@ -1,0 +1,79 @@
+/tmp/nAt1tXV4Th.o
+1 = Insert at beginning.
+2 = Insert at end.
+3 = Delete from beginning.
+4 = Delete from end.
+5 = Traverse
+6 = Exit
+1
+Enter the data
+30
+Node inserted successfully.
+
+1 = Insert at beginning.
+2 = Insert at end.
+3 = Delete from beginning.
+4 = Delete from end.
+5 = Traverse
+6 = Exit
+2
+Enter the data.
+50
+Node inserted successfully.
+
+1 = Insert at beginning.
+2 = Insert at end.
+3 = Delete from beginning.
+4 = Delete from end.
+5 = Traverse
+6 = Exit
+2
+Enter the data.
+60
+Node inserted successfully.
+
+1 = Insert at beginning.
+2 = Insert at end.
+3 = Delete from beginning.
+4 = Delete from end.
+5 = Traverse
+6 = Exit
+5
+30	0x558ff3853ae0
+50	0x558ff3853b00
+60	0x558ff3853ac0
+
+1 = Insert at beginning.
+2 = Insert at end.
+3 = Delete from beginning.
+4 = Delete from end.
+5 = Traverse
+6 = Exit
+3
+Node deleted successfully.
+
+1 = Insert at beginning.
+2 = Insert at end.
+3 = Delete from beginning.
+4 = Delete from end.
+5 = Traverse
+6 = Exit
+4
+Node deleted successfully.
+
+1 = Insert at beginning.
+2 = Insert at end.
+3 = Delete from beginning.
+4 = Delete from end.
+5 = Traverse
+6 = Exit
+5
+50	0x558ff3853ae0
+
+1 = Insert at beginning.
+2 = Insert at end.
+3 = Delete from beginning.
+4 = Delete from end.
+5 = Traverse
+6 = Exit
+6

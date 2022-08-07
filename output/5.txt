@@ -1,0 +1,49 @@
+/tmp/EnDXKJMe8o.o
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+1
+Enter the data.
+20
+20 inserted into queue.
+
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+1
+Enter the data.
+40
+40 inserted into queue.
+
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+3
+20	40	
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+2
+20 deleted from queue.
+
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+3
+40	
+Enter
+1 for insert
+2 for delete
+3 for traverse
+4 to exit
+4

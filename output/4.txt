@@ -1,0 +1,54 @@
+/tmp/dxWwSAmtSe.o
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+1
+Enter the value.
+20
+20 pushed into the stack.
+
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+1
+Enter the value.
+30
+30 pushed into the stack.
+
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+3
+20,30,
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+2
+30 poped from the stack.
+
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+3
+20,
+
+Enter
+1 for push
+2 for pop
+3 for traverse
+4 to exit
+4

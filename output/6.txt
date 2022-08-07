@@ -1,0 +1,153 @@
+/tmp/nAt1tXV4Th.o
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+1
+Enter the data.30
+Node inserted successfully.
+
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+1
+Enter the data.10
+Node inserted successfully.
+
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+2
+Enter the data
+50
+Node inserted successfully.
+
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+2
+Enter the data
+70
+Node inserted successfully.
+
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+6
+10	0x559c54587ac0
+30	0x559c54587b00
+50	0x559c54587b20
+70	(nil)
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+5
+Enter the item to be searched:
+30
+Item found at position: 1
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+7
+Successfully reversed list
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+6
+70	0x559c54587b00
+50	0x559c54587ac0
+30	0x559c54587ae0
+10	(nil)
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+3
+Node deleted successfully.
+
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+4
+Node deleted successfully.
+
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+6
+50	0x559c54587ac0
+30	(nil)
+Enter
+1 = insert at beginning
+2 = insert at end
+3 = delete from beginning
+4 = delete from end
+5 = search an item
+6 = traverse
+7 = reverse the list
+8 = Exit
+8

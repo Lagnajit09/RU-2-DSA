@@ -1,0 +1,13 @@
+/tmp/i8UOs2YMaA.o
+Enter the size of array.
+6
+Enter the elements in ascending order.
+1
+8
+45
+50
+77
+99
+Enter the element.
+77
+The item is found at position: 4

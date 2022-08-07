@@ -1,0 +1,14 @@
+/tmp/dxWwSAmtSe.o
+Enter the size of array.
+5
+Enter the elements.
+4
+9
+1
+7
+9
+Enter the value to be searched.
+9
+No. of occurrences of the item is:2
+Item found at position:
+1,4,
